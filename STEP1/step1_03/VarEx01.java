@@ -2,36 +2,36 @@ package step1_03;
 
 public class VarEx01 {
 /*
- * # º¯¼ö(variable)
- * 1. º¯¼ö¶õ, ´Ü ÇÏ³ªÀÇ °ªÀ» ÀúÀåÇÒ ¼ö ÀÖ´Â ¸Ş¸ğ¸® °ø°£
- * 2. º¯¼öÀÇ ¼±¾ğ : int a;		// ¸Ş¸ğ¸® °ø°£ ÇÒ´ç
- * 3. º¯¼öÀÇ ÃÊ±âÈ­ : a = 10;	// °ª ÀúÀå
+ * # ë³€ìˆ˜(variable)
+ * 1. ë³€ìˆ˜ë€, ë‹¨ í•˜ë‚˜ì˜ ê°’ì„ ì €ì¥í•  ìˆ˜ ìˆëŠ” ë©”ëª¨ë¦¬ ê³µê°„
+ * 2. ë³€ìˆ˜ì˜ ì„ ì–¸ : int a;		// ë©”ëª¨ë¦¬ ê³µê°„ í• ë‹¹
+ * 3. ë³€ìˆ˜ì˜ ì´ˆê¸°í™” : a = 10;	// ê°’ ì €ì¥
  */
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// ÀÚ·áÇü(Data Type)
+		// ìë£Œí˜•(Data Type)
 		
-		// 1. Á¤¼ö : integer
+		// 1. ì •ìˆ˜ : integer
 		int num;
 		num = 10;
 		System.out.println(num);
 		
-		// 2. ½Ç¼ö : double
+		// 2. ì‹¤ìˆ˜ : double
 		double dNum = 3.14;
 		System.out.println(dNum);
 		
-		// 3. ¹®ÀÚ ÇÑ °³ : character
+		// 3. ë¬¸ì í•œ ê°œ : character
 		char c1 = 'a';
 		System.out.println(c1);
-		char c2 = '°¡';
+		char c2 = 'ê°€';
 		System.out.println(c2);
 		
-		// 4. ¹®ÀÚ ¿©·¯°³ : String
+		// 4. ë¬¸ì ì—¬ëŸ¬ê°œ : String
 		String str = "java";
 		System.out.println(str);
 		
-		// 5. Âü°ú °ÅÁş : boolean
+		// 5. ì°¸ê³¼ ê±°ì§“ : boolean
 		boolean result = true;
 		System.out.println(result);
 

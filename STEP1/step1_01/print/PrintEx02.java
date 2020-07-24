@@ -4,15 +4,15 @@ public class PrintEx02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// ÀÚ·áÇü(Data Type)
+		// ìë£Œí˜•(Data Type)
 		
-				// 1. ¼ıÀÚ(Á¤¼ö) : ¼Ò¼öÁ¡ÀÌ ¾ø´Â ¼ö
+				// 1. ìˆ«ì(ì •ìˆ˜) : ì†Œìˆ˜ì ì´ ì—†ëŠ” ìˆ˜
 				System.out.println(10);
-				// 2. ¼ıÀÚ(½Ç¼ö) : ¼Ò¼öÁ¡ÀÌ ÀÖ´Â ¼ö
+				// 2. ìˆ«ì(ì‹¤ìˆ˜) : ì†Œìˆ˜ì ì´ ìˆëŠ” ìˆ˜
 				System.out.println(3.14);
-				// 3. ¹®ÀÚ ÇÑ °³ : È¬µû¿ÈÇ¥
+				// 3. ë¬¸ì í•œ ê°œ : í™‘ë”°ì˜´í‘œ
 				System.out.println('B');
-				// 4. ¹®ÀÚ ¿©·¯°³ : ½Öµû¿ÈÇ¥
+				// 4. ë¬¸ì ì—¬ëŸ¬ê°œ : ìŒë”°ì˜´í‘œ
 				System.out.println("Java Class");
 	}
 }

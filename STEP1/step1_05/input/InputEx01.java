@@ -3,15 +3,15 @@ package step1_05.input;
 import java.util.Scanner;
 
 /*
- * # ÀÔ·Â¹Ş±â
+ * # ì…ë ¥ë°›ê¸°
  * 1. import java.util.Scanner;
- * 	  java.utilÆĞÅ°Áö ¾ÈÀÇ Scanner Å¬·¡½º ÆÄÀÏÀ»
- *    ÇöÀç ÆäÀÌÁö·Î ºÒ·¯¿Â´Ù.
- * 2. scan º¯¼ö ¼³Á¤
+ * 	  java.utilíŒ¨í‚¤ì§€ ì•ˆì˜ Scanner í´ë˜ìŠ¤ íŒŒì¼ì„
+ *    í˜„ì¬ í˜ì´ì§€ë¡œ ë¶ˆëŸ¬ì˜¨ë‹¤.
+ * 2. scan ë³€ìˆ˜ ì„¤ì •
  *    Sanner scan = new Scanner(System.in);
- * 3. ¾È³»¹® ÀÛ¼º
- *    System.out.print("³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
- * 4. ÀÔ·Â¹Ş±â
+ * 3. ì•ˆë‚´ë¬¸ ì‘ì„±
+ *    System.out.print("ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
+ * 4. ì…ë ¥ë°›ê¸°
  *    int age = scan.nextInt();
  */
 
@@ -21,13 +21,13 @@ public class InputEx01 {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ìˆ«ìë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		int num = scan.nextInt();
-		System.out.println("ÀÔ·ÂÇÏ½Å ¼ıÀÚ´Â " + num + "ÀÔ´Ï´Ù.");
+		System.out.println("ì…ë ¥í•˜ì‹  ìˆ«ìëŠ” " + num + "ì…ë‹ˆë‹¤.");
 		
-		System.out.print("³ªÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+		System.out.print("ë‚˜ì´ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 		int age = scan.nextInt();
-		System.out.println("´ç½ÅÀÇ ³ªÀÌ´Â " + age + "¼¼ ÀÌ±º¿ä!");
+		System.out.println("ë‹¹ì‹ ì˜ ë‚˜ì´ëŠ” " + age + "ì„¸ ì´êµ°ìš”!");
 
 
 	}

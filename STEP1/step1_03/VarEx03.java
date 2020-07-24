@@ -3,38 +3,38 @@ package step1_03;
 public class VarEx03 {
 
 
-/* # º¯¼öÀÇ ¸í¸í±ÔÄ¢
- * 1. ¼ýÀÚ·Î ½ÃÀÛÇÒ ¼ö ¾ø´Ù.
- * 2. Æ¯¼ö¹®ÀÚ´Â _, $¸¸À» Çã¿ëÇÑ´Ù.
- * 3. ¿¹¾à¾î(Å°¿öµå)´Â »ç¿ëÇÒ ¼ö ¾ø´Ù.
+/* # ë³€ìˆ˜ì˜ ëª…ëª…ê·œì¹™
+ * 1. ìˆ«ìžë¡œ ì‹œìž‘í•  ìˆ˜ ì—†ë‹¤.
+ * 2. íŠ¹ìˆ˜ë¬¸ìžëŠ” _, $ë§Œì„ í—ˆìš©í•œë‹¤.
+ * 3. ì˜ˆì•½ì–´(í‚¤ì›Œë“œ)ëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
  *    ex) public, class, static, void...
- * 4. ÀÚ¹Ù´Â ¾ËÆÄºªÀÇ ´ë¼Ò¹®ÀÚ¸¦ ±¸ºÐÇÑ´Ù.
+ * 4. ìžë°”ëŠ” ì•ŒíŒŒë²³ì˜ ëŒ€ì†Œë¬¸ìžë¥¼ êµ¬ë¶„í•œë‹¤.
  * --------------------------------------
- * 1. ÆÐÅ°Áö¸í, º¯¼ö¸íÀº ¼Ò¹®ÀÚ·Î ½ÃÀÛÇÑ´Ù.
- * 2. Å¬·¡½º¸íÀº ´ë¹®ÀÚ·Î ½ÃÀÛÇÑ´Ù.
+ * 1. íŒ¨í‚¤ì§€ëª…, ë³€ìˆ˜ëª…ì€ ì†Œë¬¸ìžë¡œ ì‹œìž‘í•œë‹¤.
+ * 2. í´ëž˜ìŠ¤ëª…ì€ ëŒ€ë¬¸ìžë¡œ ì‹œìž‘í•œë‹¤.
 */
 
 /*
  * 
- *  º¯¼ö ¸í¸í ±ÔÄ¢
+ *  ë³€ìˆ˜ ëª…ëª… ê·œì¹™
  * 
- *  1) Àý´ëÀû±ÔÄ¢ (¹ý)
+ *  1) ì ˆëŒ€ì ê·œì¹™ (ë²•)
  * 
- *  - º¯¼ö¸í¿¡ ¶ç¾î¾²±â¸¦ »ç¿ëÇÒ ¼ö ¾ø´Ù.
- *  - º¯¼ö¸í¿¡ $¿Í _¸¦ Á¦¿ÜÇÑ Æ¯¼ö¹®ÀÚ¸¦ »ç¿ëÇÒ ¼ö ¾ø´Ù.
- *  - º¯¼ö¸í¿¡ ¼ýÀÚ´Â »ç¿ë°¡´ÉÇÏ³ª ¼ýÀÚ·Î ½ÃÀÛÇÒ ¼ö ¾ø´Ù.
- *  - ¿¹¾à¾î¸¦ »ç¿ëÇÒ ¼ö ¾ø´Ù.    ex) int , void (»ö±òÀÖ´Â°Å...) 
- *  - ´ë¼Ò¹®ÀÚ¸¦ ±¸º°ÇÑ´Ù.      Ex) productCode != ProductCode
+ *  - ë³€ìˆ˜ëª…ì— ë„ì–´ì“°ê¸°ë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
+ *  - ë³€ìˆ˜ëª…ì— $ì™€ _ë¥¼ ì œì™¸í•œ íŠ¹ìˆ˜ë¬¸ìžë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
+ *  - ë³€ìˆ˜ëª…ì— ìˆ«ìžëŠ” ì‚¬ìš©ê°€ëŠ¥í•˜ë‚˜ ìˆ«ìžë¡œ ì‹œìž‘í•  ìˆ˜ ì—†ë‹¤.
+ *  - ì˜ˆì•½ì–´ë¥¼ ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.    ex) int , void (ìƒ‰ê¹”ìžˆëŠ”ê±°...) 
+ *  - ëŒ€ì†Œë¬¸ìžë¥¼ êµ¬ë³„í•œë‹¤.      Ex) productCode != ProductCode
  * 
- *  2) ¾Ï¹¬Àû±ÔÄ¢ ( »çÈ¸Àû¾à¼Ó, ·ê )
+ *  2) ì•”ë¬µì ê·œì¹™ ( ì‚¬íšŒì ì•½ì†, ë£° )
  *  
- *  - º¯¼ö¸íÀº ¼Ò¹®ÀÚ·Î ½ÃÀÛÇÑ´Ù.
- *  - º¯¼ö¸í¿¡ ÇÑ±ÛÀ» »ç¿ëÇÏÁö ¾Ê´Â´Ù.
- *  - µÎ ´Ü¾î°¡ ÀÌ¾îÁö´Â °æ¿ì ÀÌ¾îÁö´Â ´Ü¾îÀÇ Ã¹±ÛÀÚ¸¦ ´ë¹®ÀÚ·Î ÀÛ¼ºÇÑ´Ù. (camel case)
+ *  - ë³€ìˆ˜ëª…ì€ ì†Œë¬¸ìžë¡œ ì‹œìž‘í•œë‹¤.
+ *  - ë³€ìˆ˜ëª…ì— í•œê¸€ì„ ì‚¬ìš©í•˜ì§€ ì•ŠëŠ”ë‹¤.
+ *  - ë‘ ë‹¨ì–´ê°€ ì´ì–´ì§€ëŠ” ê²½ìš° ì´ì–´ì§€ëŠ” ë‹¨ì–´ì˜ ì²«ê¸€ìžë¥¼ ëŒ€ë¬¸ìžë¡œ ìž‘ì„±í•œë‹¤. (camel case)
  *    Ex) productCode , studentName
- *  - µÎ ´Ü¾î°¡ ÀÌ¾îÁö´Â °æ¿ì ÀÌ¾îÁö´Â ´Ü¾î¸¦ _·Î ÀÌ¾îÁØ´Ù. (snake case) 
+ *  - ë‘ ë‹¨ì–´ê°€ ì´ì–´ì§€ëŠ” ê²½ìš° ì´ì–´ì§€ëŠ” ë‹¨ì–´ë¥¼ _ë¡œ ì´ì–´ì¤€ë‹¤. (snake case) 
  *    Ex) product_code , student_name
- *  - 'Á¦3ÀÚ°¡'º¸¾Æµµ º¯¼ö¾ÈÀÇ µ¥ÀÌÅÍ¸¦ 'Á÷°üÀû'À¸·Î ¾Ë ¼ö ÀÖµµ·Ï º¯¼ö¸íÀ» ÀÛ¼ºÇÑ´Ù. (Á¦ÀÏ Áß¿ä)
+ *  - 'ì œ3ìžê°€'ë³´ì•„ë„ ë³€ìˆ˜ì•ˆì˜ ë°ì´í„°ë¥¼ 'ì§ê´€ì 'ìœ¼ë¡œ ì•Œ ìˆ˜ ìžˆë„ë¡ ë³€ìˆ˜ëª…ì„ ìž‘ì„±í•œë‹¤. (ì œì¼ ì¤‘ìš”)
  *    ex) a (x)    , productCode (o)
  *    
  *  
@@ -47,8 +47,8 @@ public static void main(String[] args) {
      System.out.println(test);
      System.out.println(Test);
      
-     int $money = 1000; //¿À $ Çã¿ë
-     int curPos = -1;    // ÇöÀçÀ§Ä¡(current position)
+     int $money = 1000; //ì˜¤ $ í—ˆìš©
+     int curPos = -1;    // í˜„ìž¬ìœ„ì¹˜(current position)
      
      // int 1num = 10;
      // int #test = 10;

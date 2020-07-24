@@ -6,16 +6,16 @@ public class InputEx02_Question {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		// ¹®Á¦ 1) ¼ıÀÚ 2°³¸¦ ÀÔ·Â¹Ş¾Æ, ÇÕ Ãâ·Â
-		System.out.println("¼ıÀÚ 2°³ ÀÔ·ÂÇÏ¶ó");
+		// ë¬¸ì œ 1) ìˆ«ì 2ê°œë¥¼ ì…ë ¥ë°›ì•„, í•© ì¶œë ¥
+		System.out.println("ìˆ«ì 2ê°œ ì…ë ¥í•˜ë¼");
 		int firstNum = scan.nextInt();
 		int secondNum = scan.nextInt();
-		System.out.println("ÀÔ·Â¹ŞÀº ¼ıÀÚ " + firstNum + "+" + secondNum + "=" + (firstNum + secondNum));
-		// ¹®Á¦ 2) ¼ıÀÚ 1°³¸¦ ÀÔ·Â¹Ş¾Æ, È¦¼öÀÌ¸é true Ãâ·Â
-		System.out.println("¼ıÀÚÀÔ·ÂÇØ¶ó, È¦¼ö¸é true");
+		System.out.println("ì…ë ¥ë°›ì€ ìˆ«ì " + firstNum + "+" + secondNum + "=" + (firstNum + secondNum));
+		// ë¬¸ì œ 2) ìˆ«ì 1ê°œë¥¼ ì…ë ¥ë°›ì•„, í™€ìˆ˜ì´ë©´ true ì¶œë ¥
+		System.out.println("ìˆ«ìì…ë ¥í•´ë¼, í™€ìˆ˜ë©´ true");
 		int number = scan.nextInt();
 		System.out.println(number % 2 == 1);
-		// ¹®Á¦ 3) ¼ºÀûÀ» ÀÔ·Â¹Ş¾Æ, 60Á¡ ÀÌ»óÀÌ°í 100Á¡ ÀÌÇÏÀÌ¸é true Ãâ·Â
+		// ë¬¸ì œ 3) ì„±ì ì„ ì…ë ¥ë°›ì•„, 60ì  ì´ìƒì´ê³  100ì  ì´í•˜ì´ë©´ true ì¶œë ¥
 
 	}
 

@@ -8,22 +8,22 @@ public class InputEx02_Answer {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		
-		// ¹®Á¦ 1) ¼ıÀÚ 2°³¸¦ ÀÔ·Â¹Ş¾Æ, ÇÕ Ãâ·Â
-		System.out.print("Á¤¼ö1 ÀÔ·Â : ");
+		// ë¬¸ì œ 1) ìˆ«ì 2ê°œë¥¼ ì…ë ¥ë°›ì•„, í•© ì¶œë ¥
+		System.out.print("ì •ìˆ˜1 ì…ë ¥ : ");
 		int x = scan.nextInt();
-		System.out.print("Á¤¼ö2 ÀÔ·Â : ");
+		System.out.print("ì •ìˆ˜2 ì…ë ¥ : ");
 		int y = scan.nextInt();
 		
 		int total = x + y;
-		System.out.println("µÎ ¼öÀÇ ÇÕ = " + total);
+		System.out.println("ë‘ ìˆ˜ì˜ í•© = " + total);
 		
-		// ¹®Á¦ 2) ¼ıÀÚ 1°³¸¦ ÀÔ·Â¹Ş¾Æ, È¦¼öÀÌ¸é true Ãâ·Â
-		System.out.print("¼ıÀÚ ÇÑ °³ ÀÔ·Â : ");
+		// ë¬¸ì œ 2) ìˆ«ì 1ê°œë¥¼ ì…ë ¥ë°›ì•„, í™€ìˆ˜ì´ë©´ true ì¶œë ¥
+		System.out.print("ìˆ«ì í•œ ê°œ ì…ë ¥ : ");
 		int z = scan.nextInt();
 		System.out.println(z % 2 == 1);
 		
-		// ¹®Á¦ 3) ¼ºÀûÀ» ÀÔ·Â¹Ş¾Æ, 60Á¡ ÀÌ»óÀÌ°í 100Á¡ ÀÌÇÏÀÌ¸é true Ãâ·Â
-		System.out.print("¼ºÀû ÀÔ·Â : ");
+		// ë¬¸ì œ 3) ì„±ì ì„ ì…ë ¥ë°›ì•„, 60ì  ì´ìƒì´ê³  100ì  ì´í•˜ì´ë©´ true ì¶œë ¥
+		System.out.print("ì„±ì  ì…ë ¥ : ");
 		int score = scan.nextInt();
 		System.out.println(60 <= score && score <= 100);
 	}

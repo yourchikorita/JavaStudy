@@ -4,13 +4,13 @@ public class OpEx08_Question {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// ¿¹) 3ÀÇ ¹è¼öÀÌ¸é¼­, Â¦¼öÀÌ¸é true Ãâ·Â
+		// ì˜ˆ) 3ì˜ ë°°ìˆ˜ì´ë©´ì„œ, ì§ìˆ˜ì´ë©´ true ì¶œë ¥
 		int num = 12;
 		System.out.println(num % 3 == 0 && num % 2 == 0);
 		
-		// ¹®Á¦ 1) °ú¶ô
-		// 3°ú¸ñÀÇ Æò±ÕÀÌ 60Á¡ ÀÌ»óÀÌ¸é, true
-		// ´Ü, ¾î´À ÇÑ °ú¸ñÀÌ¶óµµ 50Á¡ ¹Ì¸¸ÀÌ¸é, false
+		// ë¬¸ì œ 1) ê³¼ë½
+		// 3ê³¼ëª©ì˜ í‰ê· ì´ 60ì  ì´ìƒì´ë©´, true
+		// ë‹¨, ì–´ëŠ í•œ ê³¼ëª©ì´ë¼ë„ 50ì  ë¯¸ë§Œì´ë©´, false
 		int kor = 100;
 		int eng = 87;
 		int math = 41;
@@ -18,7 +18,7 @@ public class OpEx08_Question {
 		
 		System.out.println(average >= 60 && kor >49 && eng > 49 && math > 49);
 
-		// ¹®Á¦ 2) Å°°¡ 200cmÀÌ»óÀÌ°Å³ª ¸ö¹«°Ô°¡ 200kg ÀÌ»óÀÌ¸é, ÀÔÀå(true)
+		// ë¬¸ì œ 2) í‚¤ê°€ 200cmì´ìƒì´ê±°ë‚˜ ëª¸ë¬´ê²Œê°€ 200kg ì´ìƒì´ë©´, ìž…ìž¥(true)
 		int height1 = 199;
 		int weight1 = 199;
 

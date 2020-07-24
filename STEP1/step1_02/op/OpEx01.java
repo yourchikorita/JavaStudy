@@ -2,13 +2,13 @@ package step1_02.op;
 
 public class OpEx01 {
 /*
- * # ¿¬»êÀÚ(operator)
- * 1. »ê¼ú ¿¬»êÀÚ
- * 1) ´õÇÏ±â			+
- * 2) »©±â			-
- * 3) °öÇÏ±â			*
- * 4) ³ª´©±â			/
- * 5) ³ª¸ÓÁö			%
+ * # ì—°ì‚°ì(operator)
+ * 1. ì‚°ìˆ  ì—°ì‚°ì
+ * 1) ë”í•˜ê¸°			+
+ * 2) ë¹¼ê¸°			-
+ * 3) ê³±í•˜ê¸°			*
+ * 4) ë‚˜ëˆ„ê¸°			/
+ * 5) ë‚˜ë¨¸ì§€			%
  */
 
 	public static void main(String[] args) {
@@ -18,9 +18,9 @@ public class OpEx01 {
 		System.out.println(10 - 3);
 		System.out.println(10 * 3);
 		
-		// Á¤¼ö / Á¤¼ö = Á¤¼ö
-		// Á¤¼ö / ½Ç¼ö = ½Ç¼ö
-		// ½Ç¼ö / Á¤¼ö = ½Ç¼ö
+		// ì •ìˆ˜ / ì •ìˆ˜ = ì •ìˆ˜
+		// ì •ìˆ˜ / ì‹¤ìˆ˜ = ì‹¤ìˆ˜
+		// ì‹¤ìˆ˜ / ì •ìˆ˜ = ì‹¤ìˆ˜
 		System.out.println(10 / 3);
 		System.out.println(10 / 3.0);
 		System.out.println(10 % 3);

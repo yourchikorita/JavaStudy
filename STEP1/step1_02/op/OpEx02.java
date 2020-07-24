@@ -4,18 +4,18 @@ public class OpEx02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// 1. µ¡¼À ¿¬»êÀÚ
+		// 1. ë§ì…ˆ ì—°ì‚°ì
 		System.out.println(10 + 3);
-		// 2. ¿¬°á ¿¬»êÀÚ
-		// 1) "¹®ÀÚ" + "¹®ÀÚ" = "¹®ÀÚ"
-		System.out.println("¾È³ç" + "ÇÏ¼¼¿ä");
-		// 2) ¼ıÀÚ + "¹®ÀÚ" = "¹®ÀÚ"
+		// 2. ì—°ê²° ì—°ì‚°ì
+		// 1) "ë¬¸ì" + "ë¬¸ì" = "ë¬¸ì"
+		System.out.println("ì•ˆë…•" + "í•˜ì„¸ìš”");
+		// 2) ìˆ«ì + "ë¬¸ì" = "ë¬¸ì"
 		System.out.println("10" + 3);
-		// 3) "¹®ÀÚ" + ¼ıÀÚ = "¹®ÀÚ"
+		// 3) "ë¬¸ì" + ìˆ«ì = "ë¬¸ì"
 		System.out.println(3 + "10");
 		
-		System.out.println("´õÇÏ±â = " + 10 + 3);
-		System.out.println("´õÇÏ±â = " + (10 + 3));
+		System.out.println("ë”í•˜ê¸° = " + 10 + 3);
+		System.out.println("ë”í•˜ê¸° = " + (10 + 3));
 
 
 	}
