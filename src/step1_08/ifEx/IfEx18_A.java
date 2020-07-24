@@ -41,7 +41,7 @@ public class IfEx18_A {
 			
 		}
 		
-		System.out.println("요금 = " + fee + "원");
+		System.out.println("요금  = " + fee + "원");
 		
 	}
 }
