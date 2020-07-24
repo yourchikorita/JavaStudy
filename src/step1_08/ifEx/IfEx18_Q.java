@@ -20,7 +20,7 @@ public class IfEx18_Q {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("이용할 정거장 수를 입력해주세요");
+		System.out.println("이용할  정거장 수를 입력해주세요");
 		Scanner scan = new Scanner(System.in);
 		int station = scan.nextInt();
 		int fee = 0;
