@@ -38,6 +38,9 @@ public class WhileEx18_A {
 		// 요금
 		int fee = 0;
 		
+		//이동 수
+		int move = 0;
+		
 		boolean run = true;
 		while(run) {
 			
@@ -75,11 +78,19 @@ public class WhileEx18_A {
 				}else if(dir == 4) {
 					y = y + speed;
 				}
+				move = move + speed;
 			}
 			
 			if(x == desX  && y == desY) {
-				System.out.println("목적지 도착");
+				System.out.println("목적지 도착~~~");
+				if(move % 2 ==1) {
+					fee = fee + 50;
+				}
+				fee = fee + move/2 * 50;
+				System.out.println("택시비는"+ fee);
+				run = false;
 			}
+			
 			
 		}
 		
