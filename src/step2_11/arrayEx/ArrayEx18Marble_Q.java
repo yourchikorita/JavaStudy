@@ -1,5 +1,6 @@
 package step2_11.arrayEx;
 
+import java.util.Arrays;
 import java.util.Scanner;
 /*
  * # 미니마블
@@ -24,6 +25,7 @@ import java.util.Scanner;
 public class ArrayEx18Marble_Q {
 	public static void main(String[] args) {
 		
+
 		Scanner scan = new Scanner(System.in);
 		
 		int[] game = {1, 2, 3, 4, 5, 6, 7, 8};
@@ -35,5 +37,7 @@ public class ArrayEx18Marble_Q {
 		int idx1 = 0;	int idx2 = 0;
 		p1[idx1] = 1;	p2[idx2] = 2;
 
+
+		
 	}
 }

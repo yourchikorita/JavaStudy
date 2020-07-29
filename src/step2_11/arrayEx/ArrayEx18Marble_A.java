@@ -1,5 +1,6 @@
 package step2_11.arrayEx;
 
+import java.util.Arrays;
 import java.util.Scanner;
 /*
  * # 미니마블
@@ -34,45 +35,46 @@ public class ArrayEx18Marble_A {
 		
 		int idx1 = 0;	int idx2 = 0;
 		p1[idx1] = 1;	p2[idx2] = 2;
-		
 		int win1 = 0;	int win2 = 0;
 		
 		boolean run = true;
+		
 		while(run) {
-			
-			for(int i=0; i<8; i++) {
+			for(int i = 0; i < game.length; i++) {
 				System.out.print(game[i] + " ");
 			}
 			System.out.println();
-
-			for(int i=0; i<8; i++) {
-				System.out.print(p1[i] + " ");
+			
+			for(int i = 0; i < p1.length; i++) {
+				System.out.print(p1[i]+ " ");
 			}
-			System.out.print("[" + win1 + "바퀴]");
+			System.out.print("[" + win1 + "바퀴] p1");// 첫 스타트 줄 p1
+			
+			System.out.println(" ");
+			for(int i = 0; i < p2.length; i++) {
+				System.out.print(p2[i]+ " ");
+			}
+			System.out.print("[" + win2 + "바퀴] p2");// 첫 스타트 줄 p2
 			System.out.println();
 			
-			for(int i=0; i<8; i++) {
-				System.out.print(p2[i] + " ");
-			}
-			System.out.print("[" + win2 + "바퀴]");
-			System.out.println("\n");
 			
-			if(turn % 2 == 0) {
-				System.out.print("[p1]1~3 입력 : ");
+			
+			
+			if(turn % 2 == 0) {//p1
+				System.out.println("p1 차레 1~3 입력");
 				int move = scan.nextInt();
-				
 				p1[idx1] = 0;
 				idx1 = idx1 + move;
 				
 				if(idx1 >= 8) {
 					win1 += 1;
 				}
-				
 				idx1 = idx1 % 8;
 				
 				p1[idx1] = 1;
-			}
-			else if(turn % 2 == 1) {
+				
+				
+			}else if(turn % 2 == 1) {//p2
 				System.out.print("[p2]1~3 입력 : ");
 				int move = scan.nextInt();
 				
@@ -86,11 +88,12 @@ public class ArrayEx18Marble_A {
 				idx2 = idx2 % 8;
 				
 				p2[idx2] = 2;
+				
 			}
 			
-			if(idx1 == idx2 && idx1 != 0 && turn % 2 == 0) {
+			if(idx1 == idx2 && idx1 != 0 && turn % 2 == 0) {//p1차레에 인덱스가 같으면 이긴것
 				System.out.println("[p1]이 p2를 잡았다!");
-				p2[idx2] = 0;
+				p2[idx2] = 0;//잡히면 원점으로 돌아감
 				idx2 = 0;
 				p2[idx2] = 2;
 			}
@@ -109,9 +112,8 @@ public class ArrayEx18Marble_A {
 				System.out.println("[p1]승리!");
 				break;
 			}
+			
 		}
-
-
-
+		
 	}
 }

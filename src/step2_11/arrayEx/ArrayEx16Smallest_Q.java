@@ -20,6 +20,8 @@ public class ArrayEx16Smallest_Q {
 		
 		int[] arr = new int[4];
 		int[] check = new int[4];
-		
+		while(true) {
+			
+		}
 	}
 }

@@ -24,6 +24,7 @@ public class OpEx01 {
 		System.out.println(10 / 3);
 		System.out.println(10 / 3.0);
 		System.out.println(10 % 3);
+		System.out.println(5 % 3);
 
 
 	}

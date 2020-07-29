@@ -32,6 +32,7 @@ public class IfEx18_A {
 			if(station % 2 == 1) {
 				fee = 600; 
                 int add = (station - 10) / 2 * 50;
+                
                 fee = fee + add + 50; // 홀수일때는 50원이 적게 계산된다.
 			}else if(station % 2 == 0){
                 fee = 600;
