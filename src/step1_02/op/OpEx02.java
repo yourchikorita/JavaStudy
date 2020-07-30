@@ -16,7 +16,8 @@ public class OpEx02 {
 		
 		System.out.println("더하기 = " + 10 + 3);
 		System.out.println("더하기 = " + (10 + 3));
-
+		int a = 3  * 25; ;
+		System.out.println(a);
 
 	}
 
