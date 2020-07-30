@@ -27,7 +27,7 @@ import java.util.Scanner;
 public class ArrayEx32ATM_A {
 
 	public static void main(String[] args) {
-Scanner scan = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		
 		int MAX = 5;
 		
