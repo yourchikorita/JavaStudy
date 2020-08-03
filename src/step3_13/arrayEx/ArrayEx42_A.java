@@ -75,6 +75,7 @@ public class ArrayEx42_A {
 			int loc2 = scan.nextInt();
 			int idxI1 = 0; int idxJ1 = 0;
 			int idxI2 = 0; int idxJ2 = 0;
+			
 			for(int i=0;i<pay.length;i++) {
 				for(int j=0;j<pay.length;j++) {
 					if(loc1 == apt[i][j]) {
@@ -90,7 +91,16 @@ public class ArrayEx42_A {
 			}
 			int temp = 0;
 			temp = pay[idxI1][idxJ1];
-		
+			 pay[idxI1][idxJ1] =  pay[idxI2][idxJ2];
+			 pay[idxI2][idxJ2] = temp;
+			 System.out.println("교체 결과");
+
+				for(int i=0;i<pay.length;i++) {
+					for(int j=0;j<pay.length;j++) {
+						System.out.print(pay[i][j]+" ");
+					}
+					System.out.println("  ");
+				}
 			
 
 	}
