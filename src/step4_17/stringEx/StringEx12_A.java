@@ -35,16 +35,24 @@ public class StringEx12_A {
 		
 		int i = 0;
 		while(i < words.length) {
-			int size = words[i].length();
-			int r = ran.nextInt(size);
+			int size = words[i].length();//단어별 길이
+			int r = ran.nextInt(size);//단어중 한개의 인덱스 번호
 
 
 			for(int j=0; j<size; j++) {
-				if(j == r) {
+				if(j == r) {//랜덤 인덱스는 *로 한다.
+					System.out.print("*");
 				}else {
-					System.out.print(words[i].charAt(j));//한글자씩
+					System.out.print(words[i].charAt(j));//나머지는 그대로 나온다.
 				}
 			}
+			System.out.println("입력 : ");
+			String user = scan.next();
+			if(user.equals(words[i])) {
+				i += 1;
+			}
+
+
 			
 		}
 

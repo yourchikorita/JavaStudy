@@ -10,7 +10,14 @@ public class ArrayTest4 {
 		int[] b = { 13, 54, 17, 42, 1 };
 		int[] c = { 0,0,0,0,0};
 		// 예) c[5] = {74,82,0,0,0}
-
+		int jj = 0;
+		for(int i=0;i<a.length;i++) {
+			if((a[i]+b[i]) % 2 == 0) {
+				c[jj] = a[i]+b[i];
+				jj += 1;
+			}
+		}
+		System.out.println(Arrays.toString(c));
 
 		// 문제2) 아래는 시험결과 이다. 시험에 합격한사람의 번호만 win 에 저장 (60점이상합격)
 		int[] num = { 1001, 1002, 1003 };
