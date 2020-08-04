@@ -25,47 +25,53 @@ public class Test01_A {
 		moneyData += "100002/700";moneyData += "\n";	
 		moneyData += "100002/900";moneyData += "\n";
 		moneyData += "100004/800";
+		//System.out.println(nameData);
+
+		String value[] = nameData.split("\n");
+		String [][] nameList = new String[value.length][2];
 		
-		// 문제) moneyData 와 nameData 를 조합해서 아래와같이 만들어보세요
-		String userData = "";
-		/*
-		 * 100001/이만수/600
-		 * 100003/유재석/7000
-		 * 100001/이만수/100
-		 * 100002/이영희/400
-		 * 100001/이만수/600
-		 * 100004/박명수/900
-		 * 100001/이만수/130
-		 * 100003/유재석/200
-		 * 100002/이영희/700
-		 * 100002/이영희/900
-		 * 100004/박명수/800
-		 */
-		System.out.println(nameData);
-		
-		//엔터로 잘라서 배열에 넘
-		String[] nameArr = nameData.split("\n");
-		System.out.println(Arrays.toString(nameArr));
-		
-		//
-		String[][] answer = new String[nameArr.length][2];
-		System.out.println(Arrays.toString(answer)+"@@");
-		for (int i = 0; i < nameArr.length; i++) {
-			// 슬래시로 잘라 배열에 넘
-			String[] v = nameArr[i].split("/");
-			answer[i][0] = v[0];
-			answer[i][1] = v[1];
-			
+		for(int i = 0; i < nameList.length; i++) {
+			String [] val = value[i].split("/");
+			nameList[i][0] = val[0];
+			nameList[i][1] = val[1];
 		}
 		
-		for (int i = 0; i < answer.length;i++) {
-			for (int j = 0; j <2; j++) {
-				System.out.println(answer[i][j]);
-				
+		for(int i = 0; i< nameList.length; i++) {
+	//		System.out.println(nameList[i][0] + " " + nameList[i][1]);
+		}
+		
+		value = moneyData.split("\n");
+		String [][] moneyList = new String[value.length][2];
+		
+		for(int i = 0; i < moneyList.length; i++) {
+			String [] val = value[i].split("/");
+			moneyList[i][0] = val[0];
+			moneyList[i][1] = val[1];
+		}
+		
+		for(int i = 0; i< moneyList.length; i++) {
+		//	System.out.println(moneyList[i][0] + " " + moneyList[i][1]);
+		}
+		
+		String data = "";
+		for(int i = 0; i < nameList.length; i++) {
+			for(int j = 0; j < moneyList.length; j++) {
+				if(nameList[i][0].equals(moneyList[j][0])) {
+					data += moneyList[j][0];
+					data +="/";
+					data += nameList[i][1];
+					data +="/";
+					data += moneyList[j][1];
+					data +="\n";
+					
+				}
 			}
 		}
-
+		data = data.substring(0, data.length()-1);
+		System.out.println(data);
 		
+
+
 
 		
 		
