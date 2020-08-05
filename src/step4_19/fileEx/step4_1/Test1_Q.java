@@ -1,6 +1,6 @@
-package step4_19.fileEx;
+package step4_19.fileEx.step4_1;
 
-public class Test01_Q {
+public class Test1_Q {
 
 	public static void main(String[] args) {
 		String nameData = "";

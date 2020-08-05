@@ -1,6 +1,6 @@
-package step4_19.fileEx.test;
+package step4_19.fileEx.step4_1;
 
-public class Test01_Q {
+public class Test3_Q {
 
 	public static void main(String[] args) {
 		String [][] student = 

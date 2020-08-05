@@ -1,6 +1,6 @@
-package step4_19.fileEx.test;
+package step4_19.fileEx.step4_1;
 
-public class Test02_Q {
+public class Test4_Q {
 
 	public static void main(String[] args) {
 		String [][] student = {{"aaa","신촌","1001"}, {"bbb","강남","1002" },

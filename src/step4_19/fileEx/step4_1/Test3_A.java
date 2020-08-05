@@ -1,8 +1,8 @@
-package step4_19.fileEx.test;
+package step4_19.fileEx.step4_1;
 
 import java.util.Arrays;
 
-public class Test01_A {
+public class Test3_A {
 
 	public static void main(String[] args) {
 		String [][] student = {
