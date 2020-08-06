@@ -3,7 +3,7 @@ package step4_19.fileEx.step4_2;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Crazy {
+public class CrazyAcade {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
