@@ -14,6 +14,7 @@ public class NumberMove {
 				};
 		int currentY = 3;
 		int currentX = 3;
+		int replay = 0;
 		int yx [][] = new int[10000][2];
 		
 		while(true) {
@@ -37,12 +38,16 @@ public class NumberMove {
 		
 		int tempY=0;
 		int tempX=0;
-		int i = 0;
+		
+		//되감기를 위함
+		yx[replay][0] = currentY;//3
+		yx[replay][1] = currentX;//3
+		
+		 System.out.println("currentY="+yx[replay][0]+"currentX="+yx[replay][1]);
+		
 		if(sel == 1) {//왼
 			tempX = currentX - 1;
 			tempY = currentY;
-			
-			
 		}else if(sel ==2) {//오
 			tempX = currentX + 1;
 			tempY = currentY;
@@ -52,12 +57,16 @@ public class NumberMove {
 		}else if(sel ==4) {
 			tempX = currentX; 
 			tempY = currentY + 1;
+		}else if(sel ==5) {
+			replay-=1;
+			System.out.println("!currentY="+yx[replay][0]+"currentX="+yx[replay][1]);
+			tempX = yx[replay][1];
+			tempY = yx[replay][0];
+			replay-=1;
+			
+			System.out.println("tempY="+tempY+", tempX="+tempX);
 		}
-		//되감기를 위함
-		yx[i][0] = tempX;
-		yx[i][1] = tempY;
-		
-		
+		replay+=1;
 		//기존에 0이였던 부분은 보관해뒀다가 바뀐 자리와 바꿔줌
 		 game[currentY][currentX] = game[tempY][tempX];
 		
@@ -67,6 +76,10 @@ public class NumberMove {
 		currentY = tempY;
 		currentX = tempX;
 		
+		//yx확인
+//		for (int j = 0; j < 9; j++) {
+//			System.out.println(yx[j][0]+","+yx[j][1]);
+//		}
 		}
 		
 		
