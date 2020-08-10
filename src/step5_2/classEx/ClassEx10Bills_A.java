@@ -20,7 +20,9 @@ import java.util.Scanner;
  *받은금액		10000
  *----------------------
  *잔       돈		1200
+ *
  */
+
 class Ex10 {
 	String name = "";		// 가게 이름
 	
@@ -31,21 +33,16 @@ class Ex10 {
 	
 	int total = 0;
 }
-
 public class ClassEx10Bills_A {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		Ex10 e = new Ex10();
-		int ii=0;
-		int myPrice = 0;
-		//장바구니
-		int[][] food = new int[10][2];//음식, 개수
-		int[] cnt = new int[10];
-		
+		int idx = -1;
 		e.name = "맘스터치";
+		int total=0;
 		int size = e.arPrice.length;
+		
 		while(true) {
 			System.out.println("    [" + e.name + " 햄버거]");
 			for(int i=0; i<size; i++) {
@@ -57,46 +54,30 @@ public class ClassEx10Bills_A {
 			System.out.print("메뉴 선택 : ");
 			int sel = scan.nextInt();
 			
-			if(1 == sel) {
-				
-				for (int i = 0; i < food.length; i++) {
-					if(food[i][0] == 1) {//치즈버거 이미 배열에  있다.
-						continue;
-					}else {
-						food[i][0] = 1;
-						break;
-					}
-				}
-				food[ii][1] += 1;
-				myPrice += 2500;
-				ii+=1;
-			}else if(sel == 2) {
-				
-			}else if(sel == 3) {
-				
-			}
+			if(sel >=1 && sel < 5) {
+					e.arCount[sel-1] += 1;
+					idx = sel; //어떤 햄버거인지 번호 저장
 			
-			System.out.println("주문 내역");
-			int count = 1;
-			for (int i = 0; i < food.length; i++) {
-				if(food[i][0] != 0) {
-					System.out.print(food[i][0]+","+food[i][1]);
+				
+			}else if(sel == 5) {
+				System.out.println("=== 영수증 ===");
+				for(int i=0; i<size; i++) {
+					total += e.arPrice[i] * e.arCount[i];
+					System.out.println((i+1) + "." + e.arMenu[i] + "\tX " + e.arCount[i] + "개");
+				}
+				System.out.println("총 금액 : "+ total);
+				System.out.println("입금 해주세요 :");
+				int sendMoney = scan.nextInt();
+				if(sendMoney >= total) {
+					System.out.println("거스름돈 : "+(sendMoney-total)+"원");
 					
+				}else {
+					System.out.println("금액 부족");
 				}
-				System.out.println();
 				
+				break;
 			}
-			System.out.println();
-			
-			
-			
-			System.out.println();
-			System.out.println(Arrays.toString(food));
-			System.out.println("<< 총 금액 : "+myPrice + ">>");
-		}	
-
-
-
+		}
 
 	}
 

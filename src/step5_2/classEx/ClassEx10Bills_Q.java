@@ -1,5 +1,8 @@
 package step5_2.classEx;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 /*
  * # 영수증 출력하기 : 클래스 + 변수
  * 1. 햄버거 주문을 받아 영수증을 출력한다.
@@ -22,21 +25,16 @@ package step5_2.classEx;
 	String name = "";		// 가게 이름
 	
 	int[] arPrice   = {    2500,       3800,     1500,  1000};
-	String[] arMenu = {"치즈버거", "불고기버거", "감자튀김", "콜      라"};
+	String[] arMenu = {"치즈버거", "불고버거", "감자튀김", "콜      라"};
 	
 	int[] arCount = new int[4];
 	
 	int total = 0;
 }
-
-
  */
 
+
 public class ClassEx10Bills_Q {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+		public static void main(String[] args) {
+		}
 }
