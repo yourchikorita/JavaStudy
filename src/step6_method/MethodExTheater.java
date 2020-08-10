@@ -50,7 +50,7 @@ class Theater {
 			}
 		}
 		System.out.println();
-	}
+	} 
 
 	void choiceSeat() {
 		// 좌석 현황 출력하기
