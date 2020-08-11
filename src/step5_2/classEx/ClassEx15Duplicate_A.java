@@ -19,7 +19,7 @@ class Ex15{
 	int total = 0;
 }
 
-public class ClassEx15_A {
+public class ClassEx15Duplicate_A {
 	public static void main(String[] args) {
 		Ex15 e = new Ex15();
 		Random ran = new Random();
