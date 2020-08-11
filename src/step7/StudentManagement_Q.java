@@ -1,5 +1,6 @@
 package step7;
 
+import java.io.FileWriter;
 import java.util.Scanner;
 
 class Student7 {
@@ -40,9 +41,9 @@ class Manager2 {
 		list[count] = st;
 		count += 1;
 
-		for (int i = 0; i < list.length; i++) {
-			System.out.println("id=" + list[i].id + " pw=" + list[i].pw);
-		}
+//		for (int i = 0; i < list.length; i++) {
+//			System.out.println("id=" + list[i].id + " pw=" + list[i].pw);
+//		}
 	}
 
 	// 아이디 중복 체크
@@ -81,6 +82,27 @@ class Manager2 {
 		count -= 1;
 		return temp;
 	}
+
+	// 정렬
+	void sort_data() {
+		for (int i = 0; i < count; i++) {
+			for (int n = 0; n < count; n++) {
+				if (list[i].id.compareTo(list[n].id) < 0) {// 음수가되면 사전적으로 잘 맞는것??? 질문
+					Student7 temp = list[i];
+					list[i] = list[n];
+					list[n] = temp;
+				}
+			}
+		}
+	}
+
+	// show
+	void print_student() {
+		for (int i = 0; i < count; i++) {
+			list[i].print_data();
+		}
+	}
+
 }
 
 public class StudentManagement_Q {
@@ -129,8 +151,18 @@ public class StudentManagement_Q {
 				}
 
 			} else if (sel == 3) {
+				manager.sort_data();
+				manager.print_student();
 			} else if (sel == 4) {
+				manager.print_student();
+
+				String a = "a";
+				String b = "b";
+				int ttt = a.compareTo(b);
+				System.out.println(ttt);
 			} else if (sel == 5) {
+				
+
 			} else if (sel == 6) {
 			}
 
