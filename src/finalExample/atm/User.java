@@ -1,4 +1,4 @@
-package finalExample._08_atm;
+package finalExample.atm;
 
 public class User {
 	String name = "";

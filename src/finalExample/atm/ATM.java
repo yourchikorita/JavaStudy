@@ -1,4 +1,4 @@
-package finalExample._08_atm;
+package finalExample.atm;
 import java.util.Scanner;
 public class ATM {
 	Scanner scan = new Scanner(System.in);

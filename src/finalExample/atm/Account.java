@@ -1,4 +1,4 @@
-package finalExample._08_atm;
+package finalExample.atm;
 public class Account {
 	String number = "";
 	int money = 0;
