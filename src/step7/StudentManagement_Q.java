@@ -87,7 +87,7 @@ class Manager2 {
 	void sort_data() {
 		for (int i = 0; i < count; i++) {
 			for (int n = 0; n < count; n++) {
-				if (list[i].id.compareTo(list[n].id) < 0) {// 음수가되면 사전적으로 잘 맞는것??? 질문
+				if (list[i].id.compareTo(list[n].id) < 0) {// 음수가되면 사전적으로 잘 맞는것 
 					Student7 temp = list[i];
 					list[i] = list[n];
 					list[n] = temp;
