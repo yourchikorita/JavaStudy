@@ -2,6 +2,7 @@ package finalExample;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 class Member {
 	private int custno; // 회원번호
@@ -187,31 +188,7 @@ class Manager {
 		moneyList.add(new Money(100004, 20160009, 600, 1, 600, "A006", "20160104"));
 		moneyList.add(new Money(100004, 20160010, 3000, 1, 3000, "A007", "20160106"));
 
-//		int[][] arr = new int[memberList.size()][3];
-//		int idx = 0;
-//		int check = 0;
-//		// 멤버 아이디를 머니 리스트에서 찾아서 같은게 있으면 아이디를 새로운 배열에 넣고 2번째 열에는 가격을 누젉해서 넣는다. 
-//		for (int i = 0; i < memberList.size(); i++) {
-//			for (int j = 0; j < moneyList.size(); j++) {
-//				if (memberList.get(i).getCustno() == moneyList.get(j).getCustno()) {
-//					check = 1;
-//					arr[idx][0] = memberList.get(i).getCustno();
-//					int price = moneyList.get(j).getPrice();
-//					arr[idx][2] += price;
-//				}
-//			}
-//			idx += 1;
-//		}
-//		
-//
-//		for (int i = 0; i < arr.length; i++) {
-//			if(arr[i][0] == 1001) {
-//				
-//			}
-//			System.out.println(arr[i][0] +"," + arr[i][2]);
-//		}
-		
-		
+
 		String[][] arr = new String[memberList.size()][3];
 		int idx = 0;
 		int check = 0;
@@ -221,30 +198,43 @@ class Manager {
 					arr[idx][0] = memberList.get(i).getCustno()+"";
 					arr[idx][1] = memberList.get(i).getCustname();
 					arr[idx][2] += moneyList.get(j).getPrice()+"/";
-					
-					
 				}
 			}
 			idx += 1;
 		}
-		
-		for (int i = 0; i < 4; i++) {
-			System.out.println(arr[i][0] +"," + arr[i][1]+"," + arr[i][2]);
-		}
-		System.out.println("===========================");
 		
 		String[] testArr = new String[4];
 		for (int i = 0; i < 4; i++) {
 			int sum = 0;
 			String test = arr[i][2];
 			String a = arr[i][2].substring(4);
-			System.out.println("a="+a);
 			testArr = a.split("/");
-			System.out.println(Arrays.toString(testArr));
-//			for (int j = 0; j < testArr.length; j++) {
-//				sum += Integer.parseInt(testArr[i]);
-//			}
-//			System.out.println(sum);
+			for (int j = 0; j < testArr.length; j++) {
+				sum +=Integer.parseInt(testArr[j]);
+			}
+			arr[i][2] = String.valueOf(sum);
+		}
+		
+		//정렬
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 4; j++) {
+				if(arr[i][2].compareTo(arr[j][2]) >0) {
+					String temp = arr[i][2];
+					String temp1 = arr[i][1];
+					String temp0 = arr[i][0];
+					arr[i][2]=  arr[j][2];
+					arr[i][1]= arr[j][1];
+					arr[i][0]= arr[j][0];
+					arr[j][2] = temp;
+					arr[j][1] = temp1;
+					arr[j][0] = temp0;
+				}
+			}
+			
+		}
+		//show
+		for (int i = 0; i < 4; i++) {
+			System.out.println(arr[i][0] +"," + arr[i][1]+"," + arr[i][2]);
 		}
 		
 	}
@@ -263,7 +253,8 @@ public class Test {
 		 *  100004 최사랑 4900
 		 * -------------------------------- 
 		 * 100003 장믿음 3000
-		 * -------------------------------- 100002 이축복 2500
+		 * -------------------------------- 
+		 * 100002 이축복 2500
 		 * --------------------------------
 		 */
 
