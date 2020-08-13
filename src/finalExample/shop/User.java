@@ -14,14 +14,14 @@ public class User {
 	}
 
 	void print() {
-		System.out.println("[" + id + "] " + "�ݾ� : " + money);
+		System.out.println("[" + id + "] " + "금액 : " + money);
 	}
 }
 
 class UserManager {
 	Random ran = new Random();
 	Scanner scan = new Scanner(System.in);
-	Vector<User> userList = new Vector<User>(); // ��ü ���� ����Ʈ
+	Vector<User> userList = new Vector<User>(); // 전체 유저 리스트
 	int userLog = -1;
 
 	UserManager() {
@@ -29,9 +29,9 @@ class UserManager {
 	}
 
 	void init() {
-		String[] a = { "��", "��", "��", "��", "��", "��" };
-		String[] b = { "ö", "��", "��", "��", "��", "��" };
-		String[] c = { "��", "��", "��", "��", "��", "��" };
+		String[] a = { "김", "박", "이", "최", "정", "오" };
+		String[] b = { "철", "병", "만", "여", "아", "영" };
+		String[] c = { "수", "욱", "수", "정", "름", "희" };
 		for (int i = 0; i < 10; i++) {
 			int r = ran.nextInt(a.length);
 			String name = a[r];
@@ -45,16 +45,16 @@ class UserManager {
 	}
 
 	void join() {
-		System.out.println("[����] id �� �Է��ϼ���.");
+		System.out.println("[가입] id 를 입력하세요.");
 		String id = scan.next();
 		User temp = new User(id, 0);
 		userList.add(temp);
-		System.out.println("[�޼���] " + temp.id + "�� ������ �����մϴ�.");
+		System.out.println("[메세지] " + temp.id + "님 가입을 축하합니다.");
 	}
 
 	boolean logIn() {
 		userLog = -1;
-		System.out.println("[�α���] id �� �Է��ϼ���.");
+		System.out.println("[로그인] id 를 입력하세요.");
 		String id = scan.next();
 		for (int i = 0; i < userList.size(); i++) {
 			if (id.equals(userList.get(i).id)) {
@@ -63,9 +63,9 @@ class UserManager {
 			}
 		}
 		if (userLog == -1) {
-			System.out.println("[�޼���] ���� id �Դϴ�.");
+			System.out.println("[메세지] 없는 id 입니다.");
 		} else {
-			System.out.println("[�޼���] " + userList.get(userLog).id + "�� �α���.");
+			System.out.println("[메세지] " + userList.get(userLog).id + "님 로그인.");
 			return true;
 		}
 		return false;
@@ -73,7 +73,7 @@ class UserManager {
 
 	void logOut() {
 		if (userLog != -1) {
-			System.out.println("[�޼���] " + userList.get(userLog).id + "�� �α׾ƿ�.");
+			System.out.println("[메세지] " + userList.get(userLog).id + "님 로그아웃.");
 		}
 		userLog = -1;
 	}

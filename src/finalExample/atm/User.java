@@ -1,7 +1,7 @@
 package finalExample.atm;
 
 public class User {
-	String name = "";
+	public String name = "";
 	Account acc[] = null;
 	int accCount = 0;
 	

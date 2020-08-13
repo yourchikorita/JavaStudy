@@ -14,7 +14,7 @@ public class Test2_A {
 		data += "10002/이영희/200\n";
 		data += "10004/박명수/6800\n";
 		data = data.substring(0 , data.length()-1); // 마지막 글삭제 
-		System.out.println(data);
+		System.out.println("data="+data);
 		System.out.println("=====================");
 		String [] tokens = data.split("\n");
 		int totalSize = tokens.length;
@@ -33,7 +33,7 @@ public class Test2_A {
 		for(int i = 0; i < totalSize; i++) {
 			System.out.println(numList[i] + " " + nameList[i] + " " + priceList[i]);
 		}
-		System.out.println("=====================");
+		System.out.println("위는 =====================");
 		
 		int showNum[] = new int[totalSize];
 		String showName[] = new String[totalSize];
@@ -55,7 +55,7 @@ public class Test2_A {
 		for(int i = 0; i < showCount; i++) {
 			System.out.println(showNum[i] + " " + showName[i]);
 		}
-		System.out.println("=====================");
+		System.out.println("^=====================");
 		int showTotalprice[] = new int[totalSize];
 		
 		for(int h = 0; h < totalSize; h++) {

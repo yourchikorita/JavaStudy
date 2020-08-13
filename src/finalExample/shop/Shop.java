@@ -10,7 +10,7 @@ public class Shop {
 	void mainMenu() {
 		boolean run = true;
 		while (run) {
-			System.out.println("[1.����] [2.Ż��] [3.�α���] [4.�α׾ƿ�]" + "\n[100.������] [0.����] ");
+			System.out.println("[1.가입] [2.탈퇴] [3.로그인] [4.로그아웃]" + "\n[100.관리자] [0.종료] ");
 			int sel = scan.nextInt();
 			if (sel == 1) {
 				um.join();
@@ -29,7 +29,7 @@ public class Shop {
 	void loginMenu() {
 		boolean run = true;
 		while (run) {
-			System.out.println("[1.����] [2.��ٱ��ϸ��] [0.�ڷΰ���]");
+			System.out.println("[1.쇼핑] [2.장바구니목록] [0.뒤로가기]");
 			int sel = scan.nextInt();
 			if (sel == 1) {
 				shopMenu();
@@ -44,7 +44,7 @@ public class Shop {
 	void cartMenu() {
 		boolean run = true;
 		while (run) {
-			System.out.println("[1.�� ��ٱ���] [2.����] [3.����] [0.�ڷΰ���]");
+			System.out.println("[1.내 장바구니] [2.삭제] [3.구입] [0.뒤로가기]");
 			int sel = scan.nextInt();
 			if (sel == 1) {
 				im.printJang(um.userList.get(um.userLog));
@@ -58,11 +58,11 @@ public class Shop {
 		boolean run = true;
 		while (run) {
 			im.printCategory();
-			System.out.println("[ī�װ�] ��ȣ�� �Է��ϼ���.[����.-1]");
+			System.out.println("[카테고리] 번호를 입력하세요.[종료.-1]");
 			int caID = scan.nextInt();
 			if (caID == -1)
 				break;
-			System.out.println("[������] ��ȣ�� �Է��ϼ���. ");
+			System.out.println("[아이템] 번호를 입력하세요. ");
 			im.printItemList(caID);
 			int itID = scan.nextInt();
 			im.addCart(um.userList.get(um.userLog).id, caID, itID);
@@ -72,7 +72,7 @@ public class Shop {
 	void managerMenu() {
 		boolean run = true;
 		while (run) {
-			System.out.println("[1.�����۰���] [2.ī�װ�����] [3.��ٱ��ϰ���] [4.��������] [0.�ڷΰ���] ");
+			System.out.println("[1.아이템관리] [2.카테고리관리] [3.장바구니관리] [4.유저관리] [0.뒤로가기] ");
 			int sel = scan.nextInt();
 			if (sel == 1) {
 				itemMenu();
@@ -91,7 +91,7 @@ public class Shop {
 	void categoryMenu() {
 		boolean run = true;
 		while (run) {
-			System.out.println("[1.��üī�װ�] [2.ī�װ��߰�] [3.ī�װ�����] [0.�ڷΰ���]");
+			System.out.println("[1.전체카테고리] [2.카테고리추가] [3.카테고리삭제] [0.뒤로가기]");
 			int sel = scan.nextInt();
 			if (sel == 1) {
 				im.printCategory();
@@ -106,7 +106,7 @@ public class Shop {
 	void itemMenu() {
 		boolean run = true;
 		while (run) {
-			System.out.println("[1.��ü������] [2.�������߰�] [3.�����ۻ���] [0.�ڷΰ���]");
+			System.out.println("[1.전체아이템] [2.아이템추가] [3.아이템삭제] [0.뒤로가기]");
 			int sel = scan.nextInt();
 			if (sel == 1) {
 				im.printItemList();
@@ -121,7 +121,7 @@ public class Shop {
 	void userMenu() {
 		boolean run = true;
 		while (run) {
-			System.out.println("[1.��ü����] [2.�����߰�] [3.��������] [0.�ڷΰ���]");
+			System.out.println("[1.전체유저] [2.유저추가] [3.유저삭제] [0.뒤로가기]");
 			int sel = scan.nextInt();
 			if (sel == 1) {
 				um.printUser();

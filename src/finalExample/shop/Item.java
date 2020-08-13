@@ -6,7 +6,7 @@ import java.util.Vector;
 public class Item {
 	String name;
 	int price;
-	String category; // ī�װ� // ���� , ���� , ��� , ���� ���
+	String category; // 카테고리 // 육류 , 과자 , 어류 , 과일 등등
 
 	Item(String na, int pr, String cate) {
 		name = na;
@@ -20,38 +20,38 @@ public class Item {
 }
 
 class Cart {
-	String userId; // ������ ���� id
-	String itemName; // ������ ������
+	String userId; // 구입한 유저 id
+	String itemName; // 구입한 아이템
 
 	void print() {
-		System.out.println("[" + userId + "]" + "������ : " + itemName);
+		System.out.println("[" + userId + "]" + "아이템 : " + itemName);
 	}
 }
 
 class ItemManager {
 	Scanner scan = new Scanner(System.in);
 	Vector<String> category = new Vector<String>();
-	Vector<Item> itemList = new Vector<Item>(); // ��ü �����۸���Ʈ
-	Vector<Cart> jangList = new Vector<Cart>(); // ��ü ��ٱ���
+	Vector<Item> itemList = new Vector<Item>(); // 전체 아이템리스트
+	Vector<Cart> jangList = new Vector<Cart>(); // 전체 장바구니
 	ItemManager() {
 		init();
 	}
 	void init() {
-		category.add("����");
-		category.add("����");
-		category.add("����");
-		category.add("�����");
-		Item temp = new Item("�����", 1000, category.get(0));
+		category.add("과자");
+		category.add("생선");
+		category.add("육류");
+		category.add("음료수");
+		Item temp = new Item("새우깡", 1000, category.get(0));
 		itemList.add(temp);
-		temp = new Item("����", 2000, category.get(1));
+		temp = new Item("고등어", 2000, category.get(1));
 		itemList.add(temp);
-		temp = new Item("ĭ��", 3600, category.get(0));
+		temp = new Item("칸쵸", 3600, category.get(0));
 		itemList.add(temp);
-		temp = new Item("�Ұ��", 6500, category.get(2));
+		temp = new Item("소고기", 6500, category.get(2));
 		itemList.add(temp);
-		temp = new Item("�ݶ�", 500, category.get(3));
+		temp = new Item("콜라", 500, category.get(3));
 		itemList.add(temp);
-		temp = new Item("����", 1800, category.get(1));
+		temp = new Item("새우", 1800, category.get(1));
 		itemList.add(temp);
 	}
 
@@ -94,19 +94,19 @@ class ItemManager {
 	}
 
 	void addItem() {
-		System.out.println("[�������߰�] �������̸��� �Է��ϼ���.");
+		System.out.println("[아이템추가] 아이템이름을 입력하세요.");
 		String name = scan.next();
-		System.out.println("[�������߰�] ������ �Է��ϼ���. ");
+		System.out.println("[아이템추가] 가격을 입력하세요. ");
 		int price = scan.nextInt();
 		printCategory();
-		System.out.println("[�������߰�] ī�װ��� �Է��ϼ���. ");
+		System.out.println("[아이템추가] 카테고리를 입력하세요. ");
 		int sel = scan.nextInt();
 		Item temp = new Item(name, price, category.get(sel));
 		itemList.add(temp);
 	}
 
 	void addCategory() {
-		System.out.println("[ī�װ��߰�] ī�װ� �̸��� �Է��ϼ���. ");
+		System.out.println("[카테고리추가] 카테고리 이름을 입력하세요. ");
 		String name = scan.next();
 		category.add(name);
 	}
@@ -126,3 +126,4 @@ class ItemManager {
 		jangList.add(temp);
 	}
 }
+
