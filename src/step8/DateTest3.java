@@ -45,8 +45,12 @@ public class DateTest3 {//?
 		 * SimpleDateFormat 클래스 객체를 이용해 서식을 지정하려면 
 		 * getTime() 메소드로 날짜와 시간만 얻어온 후 적용시켜야 한다.
 		*/
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd(E) HH:mm:ss");
-		System.out.println(sdf.format(calendar.getTime()));
+		//SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd(E) HH:mm:ss");
+		//이렇게 쓰임
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년MM월dd일");
+		System.out.println(sdf.format(date));
+		
+		//System.out.println(sdf.format(calendar.getTime()));
 		
 		System.out.println("년 : " + calendar.get(Calendar.YEAR));
 		System.out.println("월 : " + (calendar.get(Calendar.MONTH) + 1));
