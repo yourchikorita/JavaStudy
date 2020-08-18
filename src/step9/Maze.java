@@ -6,24 +6,6 @@ class Node{
 	int x = -1;
 	int y = -1;
 	int dir = 0; //"북 , 동 , 남 , 서"
-	public int getX() {
-		return x;
-	}
-	public void setX(int x) {
-		this.x = x;
-	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
-		this.y = y;
-	}
-	public int getDir() {
-		return dir;
-	}
-	public void setDir(int dir) {
-		this.dir = dir;
-	}
 	
 	
 }
@@ -60,6 +42,7 @@ public class Maze {
 				Vector<Node> nodeList = new Vector<>();		//지나온 흔적
 				Node node = new Node();		
 				
+				//출발시점
 				for(int i = 0; i < MAPSIZE; i++) {
 					for(int j = 0; j < MAPSIZE; j++) {
 						if(map[i][j] == 2) {
@@ -72,10 +55,10 @@ public class Maze {
 				nodeList.add(node);//출구
 				
 				//show
-				for(Node n : nodeList) {
-					System.out.print(n.getY()+","+n.getX()+"@");
-				}
-				System.out.println();
+//				for(Node n : nodeList) {
+//					System.out.print(n.getY()+","+n.getX()+"@");
+//				}
+//				System.out.println();
 		
 				boolean run = true;
 				while(run) {
@@ -85,7 +68,7 @@ public class Maze {
 						break;
 					}
 					node = nodeList.get(0);	
-					mark[node.y][node.x] = 1;
+					mark[node.y][node.x] = 1;//
 					System.out.println("===========================");
 					while(true) {						
 						if(node.dir >= NONE) {
@@ -104,12 +87,14 @@ public class Maze {
 							xx = node.x - 1;
 						}		
 						node.dir += 1;
+						
+						//새로 움직인게
 						if(yy < 0 || yy >= MAPSIZE || xx < 0 || xx >= MAPSIZE) {
 							continue;
 						}else if(mark[yy][xx] == 1) {
 							continue;
 						}else if(mark[yy][xx] == 0 && map[yy][xx] == 0) {			
-							System.out.println(yy + " " + xx);					
+							System.out.println(yy + ", " + xx);					
 							Node newNode = new Node();
 							newNode.dir = NORTH;
 							newNode.y = yy;
